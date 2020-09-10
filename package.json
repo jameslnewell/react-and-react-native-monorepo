@@ -1,0 +1,23 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "nohoist": []
+  },
+  "dependencies": {
+    "@babel/core": "^7.11.4",
+    "react": "^16.13.1",
+    "@jameslnewell/editor-config": "^1.0.1",
+    "@jameslnewell/typescript-config": "^3.0.0"
+  },
+  "scripts": {
+    "open:studio": "yarn workspace @org/mobile studio",
+    "open:xcode": "yarn workspace @org/mobile xcode"
+  }
+}

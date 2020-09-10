@@ -1,0 +1,9 @@
+{
+  "extends": "../node_modules/@jameslnewell/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "library": ["../library/src/index.tsx"]
+    }
+  }
+}

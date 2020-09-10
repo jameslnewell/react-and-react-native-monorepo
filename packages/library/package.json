@@ -1,0 +1,18 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "peerDependencies": {
+    "@types/react": "^16.9.48",
+    "@types/styled-components": "^5.1.2",
+    "react": "^16.13.1",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.48",
+    "@types/styled-components": "^5.1.2",
+    "react": "^16.13.1",
+    "styled-components": "^5.1.1"
+  }
+}
