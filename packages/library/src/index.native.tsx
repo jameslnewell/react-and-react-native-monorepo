@@ -4,9 +4,8 @@ import styled from 'styled-components/native';
 
 const StyledButton = styled(NativeButton)`
   padding: .5em 1em;
-  cursor: pointer;
   font-family: sans-serif;
-  font-size: 1em;
+  /* font-size: 1em; */
   font-weight: bold;
   color: blue;
   border-radius: 6px;
@@ -20,12 +19,11 @@ const StyledButton = styled(NativeButton)`
 
 export interface ButtonProps {
   onPress?: () => void;
+  children: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({children}) => {
-  return (
-    <StyledButton>
-      {children}
-    </StyledButton>
+export const Button = ({onPress, children}: ButtonProps) => {
+  return ( 
+    <StyledButton onPress={onPress || (() => {/* do nothing */})} title={children}/>
   );
 }
