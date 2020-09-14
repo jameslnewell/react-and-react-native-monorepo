@@ -1,9 +1,9 @@
 import React from 'react';
-import {Button as NativeButton} from 'react-native';
+import {Text, View, Pressable} from 'react-native';
 import styled from 'styled-components/native';
 
-const StyledButton = styled(NativeButton)`
-  padding: .5em 1em;
+const StyledButton = styled(View)`
+  padding: 5px 10px;
   font-family: sans-serif;
   /* font-size: 1em; */
   font-weight: bold;
@@ -19,11 +19,14 @@ const StyledButton = styled(NativeButton)`
 
 export interface ButtonProps {
   onPress?: () => void;
-  children: string;
 }
 
-export const Button = ({onPress, children}: ButtonProps) => {
+export const Button: React.FC<ButtonProps> = ({children, onPress}) => {
   return ( 
-    <StyledButton onPress={onPress || (() => {/* do nothing */})} title={children}/>
+    <Pressable onPress={onPress}>
+      <StyledButton>
+        <Text>{children}</Text>
+      </StyledButton>
+    </Pressable>
   );
 }
